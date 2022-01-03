@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>myblog</title>
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+{% include 'navbar.html' %}
+<!-- 기본 템플릿 안에 삽입될 내용 start -->
+{% block content %}
+
+{% endblock %}
+<!-- 기본 템플릿 안에 삽입될 내용 end -->
+{% include 'footer.html' %}
+<script src="{% static 'blog/js/jquery-3.6.0.js' %}"></script>
+<script src="{% static 'blog/js/bootstrap.js' %}"></script>
+{% block script %}
+<!--  삽입될 스크립트  -->
+{% endblock %}
+</body>
+</html>
